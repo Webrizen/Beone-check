@@ -1,0 +1,174 @@
+.main-dashboard{
+    width: 100vw;
+    height: 90vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr 65% 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+.left-message{
+    width: 100%;
+    height: 100%;
+    border: 0.1px solid rgba(192, 192, 192, 0.349);
+    border-radius: 7px;
+    padding: 10px;
+
+}
+.right-dashboard{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+     width: 100%;
+    height: 100%;
+    border: 0.1px solid rgba(192, 192, 192, 0.349);
+    border-radius: 7px;
+    padding: 10px;
+}
+.left-dashboard{
+    width: 100%;
+    height: 100%;
+    border: 0.1px solid rgba(192, 192, 192, 0.349);
+    border-radius: 7px;
+    padding: 10px;
+}
+.middle-dashboard{
+    width: 100%;
+    height: 100%;
+    border: 0.1px solid rgba(192, 192, 192, 0.349);
+    border-radius: 7px;
+    padding: 10px;
+}
+.welcome-message{
+    display: grid;
+    grid-template-columns: 80% 1fr;
+    gap: 10px;
+    padding: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    border-radius: 7px;
+}
+.welcome-message .left-message{
+    display: flex;
+    flex-direction: column;
+    text-align: left !important;
+    gap: 10px;
+    width: 100%;
+    background: rgba(225,225,225,0.1);
+    color: #f1f1f1;
+    backdrop-filter: blur(40px);
+    border-radius: 7px;
+    padding: 10px;
+}
+.welcome-message .left-message h1{
+    font-size: 2.4rem;
+    font-weight: 700;
+    background: linear-gradient(50deg, #45d9c9, #84b3c7);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.welcome-message .left-message p{
+    font-size: 14px;
+    color: rgba(225,225,225,0.5);
+}
+.right-message{
+    width: 100%;
+    border-radius: 7px;
+    padding: 10px;
+    overflow: hidden;
+    background: rgba(225,225,225,0.1);
+    backdrop-filter: blur(40px);
+}
+.right-message img{
+    width: 100%;
+}
+.yourOrders{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    text-align: left;
+    border-radius: 4px;
+    backdrop-filter: blur(90px);
+    width: 100% !important;
+    border: 0.1px solid rgba(192, 192, 192, 0.349);
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0 !important;
+    color:  rgba(0,0,0,0.4) !important;
+}
+.yourOrders a{
+    color: rgba(0,0,0,0.4) !important;
+}
+.yourOrders:hover{
+    background: rgba(0,0,0,0.1);
+}
+.two-flex{
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .main-dashboard{
+        grid-template-columns: 1fr;
+        overflow-x: hidden;
+        position: relative;
+    }
+    .left-dashboard{
+        position: absolute;
+        z-index: 999;
+        background: #f1f1f1;
+        width: 95%;
+        margin: 0px auto;
+        transform: translateX(-200%);
+        transition: all 0.5s;
+    }
+    .welcome-message .left-message{
+        text-align: center !important;
+    }
+    .right-dashboard{
+        position: absolute;
+        z-index: 999;
+        background: #f1f1f1;
+        width: 95%;
+        margin: 0px auto;
+        transform: translateX(200%);
+        transition: all 0.5s;
+    }
+    .middle-dashboard{
+        width: 100%;
+    }
+    .welcome-message{
+        display: flex;
+        flex-direction: column;
+        flex-flow: column-reverse;
+    }
+    .welcome-message .left-message{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .two-flex{
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        align-items: center;
+        padding: 5px 10px;
+    }
+    .ico{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        border: 0.1px solid rgba(192, 192, 192, 0.349);
+        border-radius: 7px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    .ico:hover{
+        background: rgba(0,0,0,0.01);
+    }
+}
